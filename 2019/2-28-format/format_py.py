@@ -1,0 +1,1 @@
+print "I will also print two formatted integers: %d %d" % (100, 200)
